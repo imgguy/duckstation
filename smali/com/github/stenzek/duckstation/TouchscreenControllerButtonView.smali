@@ -284,70 +284,12 @@
     move-result v1
 
     .line 12
-    iget-boolean v2, p0, Lcom/github/stenzek/duckstation/TouchscreenControllerButtonView;->c:Z
-
-    .line 13
-    .line 14
-    if-eqz v2, :cond_0
-
-    .line 15
-    .line 16
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v2
-
-    .line 20
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v2
-
-    .line 24
-    const/4 v3, 0x1
-
-    .line 25
-    const/high16 v4, 0x41200000    # 10.0f
-
-    .line 26
-    .line 27
-    invoke-static {v3, v4, v2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    .line 28
-    .line 29
-    .line 30
-    move-result v2
-
-    .line 31
-    float-to-int v2, v2
-
-    .line 32
-    rsub-int/lit8 v3, v2, 0x0
-
-    .line 33
-    .line 34
-    add-int/2addr v0, v2
-
-    .line 35
-    add-int/2addr v1, v2
-
-    .line 36
-    :goto_0
-    move v2, v3
-
-    .line 37
-    goto :goto_1
-
-    .line 38
-    :cond_0
     const/4 v3, 0x0
-
-    .line 39
-    goto :goto_0
+    const/4 v2, 0x0
+    add-int/2addr v0, v2
+    add-int/2addr v1, v2
+    move v2, v3
+    goto :goto_1
 
     .line 40
     :goto_1
