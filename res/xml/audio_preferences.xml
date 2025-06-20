@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_audio_volume">
+        <com.github.stenzek.duckstation.IntSpinBoxPreference app:defaultValue="100" app:format="%d%%" app:iconSpaceReserved="false" app:key="Audio/OutputVolume" app:maxValue="100" app:minValue="0" app:summary="@string/settings_summary_volume" app:title="@string/settings_volume" />
+        <com.github.stenzek.duckstation.IntSpinBoxPreference app:defaultValue="100" app:format="%d%%" app:iconSpaceReserved="false" app:key="Audio/FastForwardVolume" app:maxValue="100" app:minValue="0" app:summary="@string/settings_summary_fast_forward_volume" app:title="@string/settings_fast_forward_volume" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="Audio/OutputMuted" app:summary="@string/settings_summary_mute_all_sound" app:title="@string/settings_mute_all_sound" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="CDROM/MuteCDAudio" app:summary="@string/settings_summary_mute_cd_audio" app:title="@string/settings_mute_cd_audio" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_audio_configuration">
+        <ListPreference app:defaultValue="AAudio" app:entries="@array/settings_audio_backend_entries" app:entryValues="@array/settings_audio_backend_values" app:iconSpaceReserved="false" app:key="Audio/Backend" app:title="@string/settings_audio_backend" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:defaultValue="TimeStretch" app:entries="@array/settings_audio_stretch_mode_entries" app:entryValues="@array/settings_audio_stretch_mode_values" app:iconSpaceReserved="false" app:key="Audio/StretchMode" app:title="@string/settings_audio_stretch_mode" app:useSimpleSummaryProvider="true" />
+        <com.github.stenzek.duckstation.IntSpinBoxPreference app:defaultValue="100" app:format="%d ms" app:iconSpaceReserved="false" app:key="Audio/BufferMS" app:maxValue="1000" app:minValue="10" app:summary="@string/settings_summary_audio_latency" app:title="@string/settings_audio_latency" />
+        <com.github.stenzek.duckstation.IntSpinBoxPreference app:defaultValue="20" app:format="%d ms" app:iconSpaceReserved="false" app:key="Audio/OutputLatencyMS" app:maxValue="1000" app:minValue="10" app:summary="@string/settings_summary_output_latency" app:title="@string/settings_audio_output_latency" />
+    </PreferenceCategory>
+</PreferenceScreen>

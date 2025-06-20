@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_baseline_create_new_folder_24" android:enabled="false" android:id="@id/action_new_card" android:title="@string/action_memory_card_editor_new_card" />
+    <item android:icon="@drawable/ic_baseline_import_export_24" android:id="@id/action_import_card" android:title="@string/action_memory_card_editor_import_card" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_baseline_delete_sweep_24" android:enabled="false" android:id="@id/action_format_card" android:title="@string/action_memory_card_editor_format_card" />
+    <item android:icon="@drawable/ic_baseline_delete_24" android:id="@id/action_delete_card" android:title="@string/action_memory_card_editor_delete_card" app:showAsAction="ifRoom" />
+</menu>

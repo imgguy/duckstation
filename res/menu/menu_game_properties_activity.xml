@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/copy_settings" android:title="@string/game_settings_copy_settings" />
+    <item android:id="@id/clear_settings" android:title="@string/game_settings_clear_settings" />
+    <item android:id="@id/use_separate_disc_settings" android:title="@string/game_settings_use_separate_disc_settings" android:checkable="true" />
+</menu>

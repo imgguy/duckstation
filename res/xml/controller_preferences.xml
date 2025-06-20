@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/touchscreen_category_profiles">
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="@string/settings_use_game_settings_for_controller" app:persistent="false" app:summary="@string/settings_summary_use_game_settings_for_controller" app:title="Per-Game Configuration" />
+        <Preference app:iconSpaceReserved="false" app:key="ControllerPorts/CopyGlobalSettings" app:summary="@string/settings_summary_copy_global_settings" app:title="@string/settings_copy_global_settings" />
+        <Preference app:iconSpaceReserved="false" app:key="ControllerPorts/ResetToDefaults" app:summary="@string/settings_summary_reset_controller_to_defaults" app:title="@string/main_navigation_reset_settings" />
+        <Preference app:iconSpaceReserved="false" app:key="ControllerPorts/LoadInputProfile" app:summary="@string/load_input_profile_summary" app:title="@string/load_input_profile" />
+        <Preference app:iconSpaceReserved="false" app:key="ControllerPorts/SaveInputProfile" app:summary="@string/save_input_profile_summary" app:title="@string/save_input_profile" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/touchscreen_category_settings">
+        <ListPreference app:defaultValue="Disabled" app:entries="@array/settings_multitap_mode_entries" app:entryValues="@array/settings_multitap_mode_values" app:iconSpaceReserved="false" app:key="ControllerPorts/MultitapMode" app:title="@string/settings_multitap_mode" app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

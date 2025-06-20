@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_global">
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="Main/ApplyGameSettings" app:summary="@string/settings_summary_apply_game_settings" app:title="@string/settings_apply_game_settings" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="Main/ApplyCompatibilitySettings" app:summary="@string/settings_summary_apply_compatibility_settings" app:title="@string/settings_apply_compatibility_settings" />
+        <ListPreference app:defaultValue="ZstDefault" app:entries="@array/save_state_compression_entries" app:entryValues="@array/save_state_compression_values" app:iconSpaceReserved="false" app:key="Main/SaveStateCompression" app:title="@string/settings_save_state_compression" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:defaultValue="PNG" app:entries="@array/settings_screenshot_format_names" app:entryValues="@array/settings_screenshot_format_values" app:iconSpaceReserved="false" app:key="Display/ScreenshotFormat" app:title="@string/settings_screenshot_format" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:defaultValue="ScreenResolution" app:entries="@array/settings_screenshot_mode_names" app:entryValues="@array/settings_screenshot_mode_values" app:iconSpaceReserved="false" app:key="Display/ScreenshotMode" app:title="@string/settings_screenshot_mode" app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_cdrom">
+        <ListPreference app:defaultValue="8" app:entries="@array/settings_cdrom_readahead_entries" app:entryValues="@array/settings_cdrom_readahead_values" app:iconSpaceReserved="false" app:key="CDROM/ReadaheadSectors" app:title="@string/settings_cdrom_readahead" app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="CDROM/RegionCheck" app:summary="@string/settings_summary_cdrom_region_check" app:title="@string/settings_cdrom_region_check" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_cpu">
+        <ListPreference app:defaultValue="Recompiler" app:entries="@array/settings_cpu_execution_mode_entries" app:entryValues="@array/settings_cpu_execution_mode_values" app:iconSpaceReserved="false" app:key="CPU/ExecutionMode" app:title="@string/settings_cpu_execution_mode" app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="CPU/RecompilerICache" app:summary="@string/settings_summary_cpu_recompiler_icache" app:title="@string/settings_cpu_recompiler_icache" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="CPU/RecompilerBlockLinking" app:summary="@string/settings_summary_cpu_recompiler_block_linking" app:title="@string/settings_cpu_recompiler_block_linking" />
+        <ListPreference app:defaultValue="MMap" app:entries="@array/settings_cpu_fastmem_mode_entries" app:entryValues="@array/settings_cpu_fastmem_mode_values" app:iconSpaceReserved="false" app:key="CPU/FastmemMode" app:summary="@string/settings_summary_cpu_recompiler_fastmem" app:title="@string/settings_cpu_recompiler_fastmem" app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_gpu">
+        <ListPreference app:defaultValue="1" app:entries="@array/settings_gpu_msaa_entries" app:entryValues="@array/settings_gpu_msaa_values" app:iconSpaceReserved="false" app:key="GPU/MSAA" app:title="@string/settings_msaa" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:defaultValue="Disabled" app:entries="@array/settings_line_detection_mode_entries" app:entryValues="@array/settings_line_detection_mode_values" app:iconSpaceReserved="false" app:key="GPU/LineDetectMode" app:title="@string/settings_line_detection_mode" app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/ForceRoundTextureCoordinates" app:summary="@string/settings_summary_round_upscaled_texture_coordinates" app:title="@string/settings_round_upscaled_texture_coordinates" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="GPU/ScaledInterlacing" app:summary="@string/settings_summary_scaled_interlacing" app:title="@string/settings_scaled_interlacing" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_pgxp_geometry_correction">
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="GPU/PGXPCulling" app:summary="@string/settings_summary_pgxp_culling_correction" app:title="@string/settings_pgxp_culling_correction" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="GPU/PGXPTextureCorrection" app:summary="@string/settings_summary_pgxp_texture_correction" app:title="@string/settings_pgxp_texture_correction" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/PGXPColorCorrection" app:summary="@string/settings_summary_pgxp_color_correction" app:title="@string/settings_pgxp_color_correction" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/PGXPPreserveProjFP" app:summary="@string/settings_summary_pgxp_preserve_projection_precision" app:title="@string/settings_pgxp_preserve_projection_precision" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/PGXPDisableOn2DPolygons" app:summary="@string/settings_summary_pgxp_disable_on_2d_polygons" app:title="@string/settings_pgxp_disable_on_2d_polygons" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/PGXPVertexCache" app:summary="@string/settings_summary_pgxp_vertex_cache" app:title="@string/settings_pgxp_vertex_cache" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/PGXPCPU" app:summary="@string/settings_summary_pgxp_cpu_mode" app:title="@string/settings_pgxp_cpu_mode" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_debug">
+        <ListPreference app:defaultValue="3" app:entries="@array/settings_max_queued_frames_entries" app:entryValues="@array/settings_max_queued_frames_values" app:iconSpaceReserved="false" app:key="GPU/MaxQueuedFrames" app:title="@string/settings_max_queued_frames" app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="GPU/UseThread" app:summary="@string/settings_summary_gpu_thread" app:title="@string/settings_gpu_thread" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="Debug/ShowVRAM" app:summary="@string/settings_summary_show_vram" app:title="@string/settings_show_vram" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/UseDebugDevice" app:summary="@string/settings_summary_use_debug_gpu_device" app:title="@string/settings_use_debug_gpu_device" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/DisableShaderCache" app:summary="@string/settings_summary_disable_shader_cache" app:title="@string/settings_disable_shader_cache" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/DisableDualSourceBlend" app:summary="@string/settings_summary_disable_dual_source_blend" app:title="@string/settings_disable_dual_source_blend" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/DisableFramebufferFetch" app:summary="@string/settings_summary_disable_framebuffer_fetch" app:title="@string/settings_disable_framebuffer_fetch" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/DisableTextureBuffers" app:summary="@string/settings_summary_disable_texture_buffers" app:title="@string/settings_disable_texture_buffers" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="GPU/DisableTextureCopyToSelf" app:summary="@string/settings_summary_disable_texture_copy_to_self" app:title="@string/settings_disable_texture_copy_to_self" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_logging">
+        <ListPreference app:defaultValue="Warning" app:entries="@array/settings_log_level_entries" app:entryValues="@array/settings_log_level_values" app:iconSpaceReserved="false" app:key="Logging/LogLevel" app:title="@string/settings_logging_level" app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="Logging/LogToFile" app:summary="@string/settings_summary_log_to_file" app:title="@string/settings_log_to_file" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="Logging/LogToDebug" app:summary="@string/settings_summary_log_to_logcat" app:title="@string/settings_log_to_logcat" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="BIOS/PatchTTYEnable" app:summary="@string/settings_summary_console_tty_output" app:title="@string/settings_console_tty_output" />
+    </PreferenceCategory>
+</PreferenceScreen>

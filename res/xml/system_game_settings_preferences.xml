@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_console">
+        <ListPreference app:entries="@array/settings_console_region_entries" app:entryValues="@array/settings_console_region_values" app:iconSpaceReserved="false" app:key="Console/Region" app:title="@string/settings_console_region" app:useSimpleSummaryProvider="true" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="Main/DisableAllEnhancements" app:summary="@string/settings_summary_safe_mode" app:title="@string/settings_safe_mode" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="BIOS/PatchFastBoot" app:summary="@string/settings_summary_console_fast_boot" app:title="@string/settings_console_fast_boot" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="BIOS/FastForwardBoot" app:summary="@string/settings_summary_console_fast_forward_boot" app:title="@string/settings_console_fast_forward_boot" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="MemoryCards/FastForwardAccess" app:summary="@string/settings_summary_console_fast_forward_memory_card_access" app:title="@string/settings_console_fast_forward_memory_card_access" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_latency_control">
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="Display/OptimalFramePacing" app:summary="@string/settings_summary_optimal_frame_pacing" app:title="@string/settings_optimal_frame_pacing" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="Display/SkipPresentingDuplicateFrames" app:summary="@string/settings_summary_skip_present_duplicate_frames" app:title="@string/settings_skip_present_duplicate_frames" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="Display/VSync" app:summary="@string/settings_summary_video_sync" app:title="@string/settings_video_sync" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="Main/SyncToHostRefreshRate" app:summary="@string/settings_summary_general_sync_to_host_refresh_rate" app:title="@string/settings_general_sync_to_host_refresh_rate" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_speed_control">
+        <ListPreference app:entries="@array/settings_emulation_speed_entries" app:entryValues="@array/settings_emulation_speed_values" app:iconSpaceReserved="false" app:key="Main/EmulationSpeed" app:title="@string/settings_emulation_speed" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:entries="@array/settings_emulation_speed_entries" app:entryValues="@array/settings_emulation_speed_values" app:iconSpaceReserved="false" app:key="Main/FastForwardSpeed" app:title="@string/settings_fast_forward_speed" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:entries="@array/settings_emulation_speed_entries" app:entryValues="@array/settings_emulation_speed_values" app:iconSpaceReserved="false" app:key="Main/TurboSpeed" app:title="@string/settings_turbo_speed" app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_cpu">
+        <ListPreference app:entries="@array/settings_advanced_cpu_overclock_entries" app:entryValues="@array/settings_advanced_cpu_overclock_values" app:iconSpaceReserved="false" app:key="CPU/Overclock" app:title="@string/settings_cpu_overclocking" app:useSimpleSummaryProvider="true" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="Console/Enable8MBRAM" app:summary="@string/settings_summary_enable_8mb_ram" app:title="@string/settings_enable_8mb_ram" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_cdrom">
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="CDROM/LoadImageToRAM" app:summary="@string/settings_summary_preload_image_to_ram" app:title="@string/settings_cdrom_preload_image_to_ram" />
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="CDROM/LoadImagePatches" app:summary="@string/settings_summary_load_image_patches" app:title="@string/settings_cdrom_load_image_patches" />
+        <ListPreference app:entries="@array/settings_cdrom_read_speedup_entries" app:entryValues="@array/settings_cdrom_read_speedup_values" app:iconSpaceReserved="false" app:key="CDROM/ReadSpeedup" app:title="@string/settings_cdrom_read_speedup" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:entries="@array/settings_cdrom_seek_speedup_entries" app:entryValues="@array/settings_cdrom_seek_speedup_values" app:iconSpaceReserved="false" app:key="CDROM/SeekSpeedup" app:title="@string/settings_cdrom_seek_speedup" app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_rewinding">
+        <com.github.stenzek.duckstation.TriStatePreference app:iconSpaceReserved="false" app:key="Main/RewindEnable" app:summary="@string/settings_summary_rewind_enable" app:title="@string/settings_rewind_enable" />
+        <com.github.stenzek.duckstation.FloatSpinBoxPreference app:dependency="Main/RewindEnable" app:format="%.1fs" app:iconSpaceReserved="false" app:interval="0.5" app:key="Main/RewindFrequency" app:maxValue="60.0" app:minValue="0.5" app:nullable="true" app:summary="@string/settings_summary_rewind_save_frequency" app:title="@string/settings_rewind_save_frequency" />
+        <com.github.stenzek.duckstation.IntSpinBoxPreference app:dependency="Main/RewindEnable" app:format="%d slots" app:iconSpaceReserved="false" app:key="Main/RewindSaveSlots" app:maxValue="200" app:minValue="0" app:nullable="true" app:summary="@string/settings_summary_rewind_save_count" app:title="@string/settings_rewind_save_count" />
+    </PreferenceCategory>
+</PreferenceScreen>

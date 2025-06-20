@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_settings">
+        <Preference app:icon="@drawable/ic_baseline_add_24" app:key="MemoryCards/CreateNewCard" app:summary="@string/memory_card_summary_create_new_card" app:title="@string/memory_card_create_new_card" />
+        <Preference app:icon="@drawable/ic_baseline_upload_file_24" app:key="MemoryCards/ImportCard" app:summary="@string/memory_card_summary_import" app:title="@string/memory_card_import" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:iconSpaceReserved="false" app:key="MemoryCards/UsePlaylistTitle" app:title="Use Single Card For Sub-Images" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_memory_card_1">
+        <ListPreference app:defaultValue="None" app:entries="@array/settings_memory_card_mode_entries" app:entryValues="@array/settings_memory_card_mode_values" app:iconSpaceReserved="false" app:key="MemoryCards/Card1Type" app:title="@string/settings_memory_card_type" app:useSimpleSummaryProvider="true" />
+        <com.github.stenzek.duckstation.MemoryCardNamePreference app:defaultValue="shared_card_1.mcd" app:iconSpaceReserved="false" app:key="MemoryCards/Card1Path" app:title="@string/settings_memory_card_name" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_category_memory_card_2">
+        <ListPreference app:defaultValue="PerGameTitle" app:entries="@array/settings_memory_card_mode_entries" app:entryValues="@array/settings_memory_card_mode_values" app:iconSpaceReserved="false" app:key="MemoryCards/Card2Type" app:title="@string/settings_memory_card_type" app:useSimpleSummaryProvider="true" />
+        <com.github.stenzek.duckstation.MemoryCardNamePreference app:defaultValue="shared_card_2.mcd" app:iconSpaceReserved="false" app:key="MemoryCards/Card2Path" app:title="@string/settings_memory_card_name" />
+    </PreferenceCategory>
+</PreferenceScreen>

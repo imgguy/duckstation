@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_achievements_global_settings">
+        <SwitchPreferenceCompat app:defaultValue="false" app:iconSpaceReserved="false" app:key="Cheevos/Enabled" app:summary="@string/settings_summary_achievements_enable" app:title="@string/settings_achievements_enable" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/ChallengeMode" app:summary="@string/settings_summary_achievements_challenge_mode" app:title="@string/settings_achievements_challenge_mode" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/EncoreMode" app:summary="@string/settings_summary_achievements_encore_mode" app:title="@string/settings_achievements_encore_mode" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/SpectatorMode" app:summary="@string/settings_summary_achievements_spectator_mode" app:title="@string/settings_achievements_spectator_mode" />
+        <SwitchPreferenceCompat app:defaultValue="false" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/UnofficialTestMode" app:summary="@string/settings_summary_achievements_test_unofficial_test" app:title="@string/settings_achievements_test_unofficial" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/Notifications" app:summary="@string/settings_summary_achievements_achievement_notifications" app:title="@string/settings_achievements_achievement_notifications" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/LeaderboardNotifications" app:summary="@string/settings_summary_achievements_leaderboard_notifications" app:title="@string/settings_achievements_leaderboard_notifications" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/SoundEffects" app:summary="@string/settings_summary_achievements_sound_effects" app:title="@string/settings_achievements_sound_effects" />
+        <SwitchPreferenceCompat app:defaultValue="true" app:dependency="Cheevos/Enabled" app:iconSpaceReserved="false" app:key="Cheevos/Overlays" app:summary="@string/settings_summary_achievements_overlays" app:title="@string/settings_achievements_overlays" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_achievements_category">
+        <Preference app:iconSpaceReserved="false" app:key="Cheevos/Username" app:title="@string/settings_achievements_username" />
+        <Preference app:iconSpaceReserved="false" app:key="Cheevos/LoginTokenTime" app:title="@string/settings_achievements_token_generation_time" />
+        <PreferenceScreen app:iconSpaceReserved="false" app:key="Cheevos/Login" app:summary="@string/settings_summary_achievements_login" app:title="@string/settings_achievements_login" />
+        <PreferenceScreen app:iconSpaceReserved="false" app:key="Cheevos/Register" app:summary="@string/settings_summary_achievements_register" app:title="@string/settings_achievements_register" />
+        <PreferenceScreen app:iconSpaceReserved="false" app:key="Cheevos/Logout" app:summary="@string/settings_summary_achievements_logout" app:title="@string/settings_achievements_logout" />
+        <PreferenceScreen app:iconSpaceReserved="false" app:key="Cheevos/ViewProfile" app:summary="@string/settings_summary_achievements_view_profile" app:title="@string/settings_achievements_view_profile" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="@string/settings_achievements_disclaimer" />
+</PreferenceScreen>
